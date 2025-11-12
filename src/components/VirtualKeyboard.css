@@ -1,0 +1,31 @@
+.virtual-keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 90%; 
+    box-sizing: border-box;
+}
+
+.key {
+    padding: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.key:disabled {
+    background-color: #2d2b2b;
+    color: #706d6d;
+    cursor: not-allowed;
+}
+
+.key:hover:not(:disabled) {
+    background-color: #e0e0e0;
+}
